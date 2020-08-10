@@ -15,16 +15,16 @@ mongoose.connect(process.env.MONGO_URI, { useUnifiedTopology: true }).then(()=>c
 mongoose.connection.on('error', err => {console.log(`Database Connection Failed: ${err.message}`)});
 
 
-
 const myOwnMiddleWare = (req, res, next) => 
 {
     console.log("MiddleWare Applied !");
     next();
 }
+
 //middleware
 app.use(morgan("dev"));
 app.use(bodyParser.json());
-app.use(myOwnMiddleWare);
+//app.use(myOwnMiddleWare);
 
 
 
