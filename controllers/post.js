@@ -1,5 +1,5 @@
 const Post = require("../models/post");
-const Utility = require("./utility")
+const Utility = require("../utilities/utility")
 exports.getWebhook = (req, res) => {
     const VERIFY_TOKEN = process.env.VALIDATION_TOKEN;   
 };
